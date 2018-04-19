@@ -7,9 +7,9 @@ namespace algorithms
     {
         static void Main(string[] args)
         {
-            SnackVendorFactory.RunProblem("astar");
-            SnackVendorFactory.RunProblem("dijstra");
-
+            //SnackVendorFactory.RunProblem("astar");
+            //SnackVendorFactory.RunProblem("dijstra");
+            MatrixImageProcessing.RunProblem();
             Console.ReadLine();
         }
     }
