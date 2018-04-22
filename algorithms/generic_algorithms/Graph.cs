@@ -11,16 +11,21 @@ namespace algorithms.generic_algorithms
         public List<TNode> adicencyList;
     }
 
-    class AdiacencyGraph<TNode> : ICollection<TNode> where TNode : IComparable
+    public class AdiacencyGraph<TNode> : ICollection<TNode> where TNode : IComparable
     {
         Dictionary<TNode, GraphNode<TNode>> nodesDictionary;
 
-        AdiacencyGraph()
+        public AdiacencyGraph()
         {
             nodesDictionary = new Dictionary<TNode, GraphNode<TNode>>();
         }
 
         public int Count => nodesDictionary.Count;
+
+        public TNode GetNode(Func<TNode, bool> compareNode)
+        {
+            return nodesDictionary.Keys.FirstOrDefault(it => compareNode(it));
+        }
 
         public bool IsReadOnly => true;
 
@@ -68,7 +73,8 @@ namespace algorithms.generic_algorithms
 
         public bool Contains(TNode item)
         {
-            return nodesDictionary.ContainsKey(item);
+            TNode node = nodesDictionary.Keys.FirstOrDefault(it => it.CompareTo(item) == 0);
+            return node != null;
         }
 
         public void CopyTo(TNode[] array, int arrayIndex)

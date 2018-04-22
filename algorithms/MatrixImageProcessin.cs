@@ -16,7 +16,6 @@ namespace algorithms
         // 1 this is < than compared
         public int CompareTo(object obj)
         {
-
             if (obj.GetType() != GetType())
             {
                 if (obj.GetHashCode() < GetHashCode())

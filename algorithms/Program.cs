@@ -1,4 +1,5 @@
 ﻿using System;
+using algorithms.matrix;
 
 namespace algorithms
 {
@@ -9,7 +10,13 @@ namespace algorithms
         {
             //SnackVendorFactory.RunProblem("astar");
             //SnackVendorFactory.RunProblem("dijstra");
-            MatrixImageProcessing.RunProblem();
+            //MatrixImageProcessing.RunProblem();
+            //RotateClockweise.RunProblem();
+            //MaxMinAlgebricExpression.RunProblem();
+            //Determinant.RunProblem();
+            //HexagonalPath.RunProblem();
+            //RangeAndUpdateChessboard.RunProblem();
+            //MatrixModel<int>.TestMatrix();
             Console.ReadLine();
         }
     }
