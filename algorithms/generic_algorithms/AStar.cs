@@ -18,7 +18,7 @@ namespace algorithms
 
         // The set of currently discovered nodes that are not evaluated yet.
         // Initially, only the start node is known.
-        PriorityHeap<TNode> notEvaluatedNodes;
+        MaxPriorityHeap<TNode> notEvaluatedNodes;
 
         // For each node, which node it can most efficiently be reached from.
         // If a node can be reached from many nodes, cameFrom will eventually contain the
@@ -88,7 +88,7 @@ namespace algorithms
         private void InitializeSets(TNode start, TNode goal)
         {
             nodesVisited = new Dictionary<TNode, bool>();
-            notEvaluatedNodes = new PriorityHeap<TNode>();
+            notEvaluatedNodes = new MaxPriorityHeap<TNode>();
             notEvaluatedNodes.Add(start, heuristicImpl.HeuristicDistanceBetween(start, goal));
             Dictionary<TNode, TNode> dictionary = new Dictionary<TNode, TNode>();
             nodeToParent = dictionary;

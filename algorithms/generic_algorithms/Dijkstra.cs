@@ -19,7 +19,7 @@ namespace algorithms
     public class Dijkstra<TNode> where TNode : IComparable
     {
         private Dictionary<TNode, double> distanceFromStartToNode;
-        private PriorityHeap<TNode> unexploredSet;
+        private MaxPriorityHeap<TNode> unexploredSet;
         // For each node, which node it can most efficiently be reached from.
         // If a node can be reached from many nodes, cameFrom will eventually contain the
         // most efficient previous step.
@@ -95,7 +95,7 @@ namespace algorithms
             {
                 {start, 0 }
             };
-            unexploredSet = new PriorityHeap<TNode>();
+            unexploredSet = new MaxPriorityHeap<TNode>();
             unexploredSet.Add(start, 0);
             nodeToParent = new Dictionary<TNode, TNode>();
         }

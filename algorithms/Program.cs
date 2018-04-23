@@ -1,5 +1,6 @@
 ﻿using System;
 using algorithms.matrix;
+using algorithms.dynamic_programming;
 
 namespace algorithms
 {
@@ -17,6 +18,7 @@ namespace algorithms
             //HexagonalPath.RunProblem();
             //RangeAndUpdateChessboard.RunProblem();
             //MatrixModel<int>.TestMatrix();
+            PainterPartition.RunProblem();
             Console.ReadLine();
         }
     }
