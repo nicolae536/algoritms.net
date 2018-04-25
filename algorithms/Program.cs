@@ -4,9 +4,10 @@ using algorithms.dynamic_programming;
 
 namespace algorithms
 {
-
     class Program
     {
+        public static string PROJECT_ROOT = @"D:\Workspace\algoritms.net\algorithms";
+
         static void Main(string[] args)
         {
             //SnackVendorFactory.RunProblem("astar");
@@ -18,7 +19,11 @@ namespace algorithms
             //HexagonalPath.RunProblem();
             //RangeAndUpdateChessboard.RunProblem();
             //MatrixModel<int>.TestMatrix();
-            PainterPartition.RunProblem();
+            //PainterPartition.RunProblem();
+            //ASubstringOfB.RunProblem();
+            //LongTreePath.RunProblem();
+            //MarsRover.RunProblem();
+            AdictiveGameFlow.RunProblem();
             Console.ReadLine();
         }
     }

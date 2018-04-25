@@ -13,6 +13,8 @@ namespace algorithms
         public DepthFirst(IAStarHeuristic<TNode> heuristicImpl)
         {
             this.heuristicImpl = heuristicImpl;
+            visitedVertexes = new List<TNode>();
+            parentToNode = new Dictionary<TNode, TNode>();
         }
 
         public List<TNode> FindFirstPath(TNode start, TNode goal)

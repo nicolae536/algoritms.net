@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace algorithms.matrix
 {
@@ -343,7 +343,7 @@ namespace algorithms.matrix
             Console.WriteLine();
             for (int i = 0; i < model.matrixData.Count; i++)
             {
-                Console.WriteLine(string.Join(' ', model.matrixData[i]));
+                Console.WriteLine(string.Join(' ', model.matrixData[i].Select(it => it.ToString())));
             }
             Console.WriteLine();
         }
