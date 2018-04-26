@@ -51,6 +51,7 @@
     <Compile Include="dynamic_programming\LongTreePath.cs" />
     <Compile Include="dynamic_programming\MarsRovers.cs" />
     <Compile Include="dynamic_programming\PainterPartition.cs" />
+    <Compile Include="dynamic_programming\PaperCutMinimumNumberOfSqares.cs" />
     <Compile Include="generic_algorithms\AStar.cs" />
     <Compile Include="generic_algorithms\BreathFirst.cs" />
     <Compile Include="generic_algorithms\DepthFirst.cs" />

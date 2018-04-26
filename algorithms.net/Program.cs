@@ -26,7 +26,8 @@ namespace algorithms.net
             //ASubstringOfB.RunProblem();
             //LongTreePath.RunProblem();
             //MarsRover.RunProblem();
-            AdictiveGameFlow.RunProblem();
+            //AdictiveGameFlow.RunProblem();
+            PaperCutMinimumNumberOfSqares.RunProblem();
             Console.ReadLine();
         }
     }

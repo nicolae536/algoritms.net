@@ -187,7 +187,7 @@ namespace algorithms.net.dynamic_programming
                 }
 
                 flowMatrix[point.matrixRow][point.matrixColumn] = point;
-                flowMatrixClone.SetPixel(point.matrixColumn, point.matrixRow, Color.Black);
+                flowMatrixClone.SetPixel(point.matrixColumn, point.matrixRow, Color.Red);
             }
         }
 
@@ -256,7 +256,8 @@ namespace algorithms.net.dynamic_programming
                 {
                     foreach (FlowPoint item in tailOfpoints)
                     {
-                        flowMatrixClone.SetPixel(item.matrixColumn, item.matrixRow, Color.Black);
+                        flowMatrixClone.SetPixel(item.matrixColumn, item.matrixRow, Color.Red);
+                        flowMatrixClone.Save(Program.PROJECT_ROOT + path + "-" + pathsCounter + ".png", ImageFormat.Png);
                     }
                 }
 
@@ -280,10 +281,6 @@ namespace algorithms.net.dynamic_programming
             bmp.Save(Program.PROJECT_ROOT + path + ".png", ImageFormat.Png);
             Console.WriteLine(string.Join(" ", pathOutputs.Select(it => it.ToString()).ToList()));
             Console.WriteLine();
-
-
-
-            //MatrixModel<FlowPoint>.LogOnScreen(mat);
         }
 
         private bool IsMoveValid(int nextMatrixRow, int nextMatrixColumn, int color, bool isLastPoint, FlowPoint destination)
